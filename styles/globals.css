@@ -2,4 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+.card {
+  @apply flex max-h-48 max-w-[800px] m-auto rounded-2xl justify-center content-center bg-slate-400;
+}
 
+@layer base {
+  h2 {
+    @apply text-2xl;
+  }
+}
+
+@layer components {
+  .btn-blue {
+    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+  }
+  .btn-primary {
+    @apply bg-primary text-white font-bold py-2 px-4 rounded-md;
+  }
+  .header {
+    @apply h-[70px] text-white bg-[#181818] flex w-[100%] py-3 px-10 items-center fixed top-0;
+  }
+}
+
+@layer utilities {
+  .filter-grayscale {
+    filter: grayscale(100%);
+  }
+  .screen-container {
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    min-height: calc(100vh - 70px);
+  }
+}

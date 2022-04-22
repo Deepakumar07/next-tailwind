@@ -1,9 +1,10 @@
 import { NextPage } from "next";
-
-const NavigationComp: NextPage = () => {
+import HeaderComp from "./Header";
+const NavigationComp: NextPage = ({ children }) => {
   return (
-    <div>
-      <h2 className="bg-purple-600 text-red-900">We are in Navigation comp</h2>
+    <div className="relative">
+      <HeaderComp />
+      <div className="screen-container">{children}</div>
     </div>
   );
 };
